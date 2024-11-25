@@ -107,7 +107,7 @@ router.post("/add", async (req, res) => {
 router.put("/update/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const updates = req.body;
+    const updates = req.body.productData;
 
     // Ensure subCategory is an array if provided
     if (updates.subCategory && !Array.isArray(updates.subCategory)) {
