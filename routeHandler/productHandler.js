@@ -18,7 +18,7 @@ router.get("/filter", async (req, res) => {
     const products = await Product.find(query);
 
     if (products.length === 0) {
-      return res.status(404).json({ message: "No products found." });
+      return res.status(404).json({ count: 0, products: [] });
     }
 
     res.status(200).json({ count: products.length, products });
