@@ -5,7 +5,7 @@ const productSchema = mongoose.Schema({
     description: { type: String },
     category: {
         type: String,
-        enum: ['Men', 'Women', 'Kids', 'Bulk Order'],
+        enum: ['men', 'women', 'Kids', 'bulk_order'],
         required: true
     },
     subCategory: {
@@ -13,16 +13,16 @@ const productSchema = mongoose.Schema({
         required: true,
         enum: [
             // Men's subcategories
-            'Short sleeve t-shirt', 'Long sleeve t-shirt', 'Polo shirt', 'Sports jersey', 
-            'Dress shirt', 'Casual shirt', 'Katua', 'Panjabi', 'Pajama', 'Trouser', 
-            'Cargo pant', 'Under wear', 'Tank top', 'Sweat shirt', 'Hoodie',
+            'short_sleeve_t_shirt', 'long_sleeve_t_shirt', 'polo_shirt', 'sports_jersey', 
+            'dress_shirt', 'casual_shirt', 'katua', 'panjabi', 'pajama', 'trouser', 
+            'cargo_pant', 'under_wear', 'tank_top', 'sweat_shirt', 'hoodie',
             // Women's subcategories
-            'Comfy top bottom set', 'Kurti, Tunic, & Tops',
+            'comfy_top_bottom_set', 'kurti_tunic_tops',
             // Kids' subcategories
-            'Top bottom set', 'T-shirt', 'Polo shirt', 'Sleeve less t-shirt', 
-            '3quarter shorts', 'Trouser',
+            'top_bottom_set', 't_shirt', 'polo_shirt', 'sleeve_less_t_shirt', 
+            '3_quarter_shorts', 'trouser',
             // Bulk Order
-            'Bulk Order'
+            'bulk_order'
         ]
     },
     price: { type: Number, required: true },
